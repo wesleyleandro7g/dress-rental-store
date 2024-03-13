@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 import localFont from 'next/font/local'
+import { cn } from '@/lib/utils'
 import './globals.css'
 
 const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' })
@@ -72,7 +73,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-br'>
-      <body className={`${raleway.variable} ${lufga.variable}`}>
+      <body
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased',
+          raleway.variable,
+          lufga.variable
+        )}
+      >
         {children}
       </body>
     </html>
