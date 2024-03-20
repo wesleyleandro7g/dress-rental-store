@@ -4,7 +4,7 @@ import { Search, User } from 'lucide-react'
 
 export function Header() {
   return (
-    <header className='flex justify-center items-center w-full h-16 bg-white'>
+    <header className='flex justify-center items-center w-full h-16 bg-white fixed top-0 z-50 shadow-md'>
       <div className='flex w-full justify-between items-center max-w-screen-xl'>
         <div className='flex items-center gap-8'>
           <Image
